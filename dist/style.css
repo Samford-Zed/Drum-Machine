@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background: gray;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+#drum-machine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+
+.pads {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 15px;
+}
+
+.drum-pad {
+  background: #444;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 30px 0;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+  transition: all 0.2s ease;
+}
+
+.drum-pad:hover {
+  background: #555;
+}
+
+.drum-pad:active {
+  background: #230777;
+  transform: scale(0.95);
+}
+
+.drum-pad:focus {
+  outline: none;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.power-button,
+.sound-group-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.power-button:hover,
+.sound-group-button:hover {
+  background-color: #333;
+}
+
+#display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #234252;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+  min-width: 160px;
+}
+
+.volume-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.volume-control span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.volume-control input[type="range"] {
+  margin: 5px 0;
+  width: 100px;
+}
